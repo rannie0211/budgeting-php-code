@@ -5,23 +5,23 @@
     $dbpassword = "990211Rouyi";
     $dbname = "budgeting-db";
 
-    // //Initializes MySQLi
-    // $conn = mysqli_init();
+    //Initializes MySQLi
+    $conn = mysqli_init();
 
-    // mysqli_ssl_set($conn,NULL,NULL, "/var/www/html/DigiCertGlobalRootCA.crt.pem", NULL, NULL);
+    mysqli_ssl_set($conn,NULL,NULL, "/var/www/html/DigiCertGlobalRootCA.crt.pem", NULL, NULL);
 
-    // // Establish the connection
-    // mysqli_real_connect($conn, $servername, dbusername, dbpassword, dbname, 3306, NULL, MYSQLI_CLIENT_SSL);
+    // Establish the connection
+    mysqli_real_connect($conn, $servername, dbusername, dbpassword, dbname, 3306, NULL, MYSQLI_CLIENT_SSL);
 
-    // //If connection failed, show the error
-    // if (mysqli_connect_errno())
-    // {
-    //     die('Failed to connect to MySQL: '. mysqli_connect_error());
-    // }
-    // else 
-    // {
-    //     echo "Connect Successfully";
-    // }
+    //If connection failed, show the error
+    if (mysqli_connect_errno())
+    {
+        die('Failed to connect to MySQL: '. mysqli_connect_error());
+    }
+    else 
+    {
+        echo "Connect Successfully";
+    }
 
     function showMessage($status, $title, $message, $url)
     {
