@@ -28,14 +28,14 @@ if ($username === "" || $email === "" || $password === "")
     return;
 }
 
-// Create connection
-$conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
+// // Create connection
+// $conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
 
-// Check connection
-if ($conn->connect_error)
-{
-	showMessage(0, "Failed", "Connection failed: " . $conn->connect_error, "");
-}
+// // Check connection
+// if ($conn->connect_error)
+// {
+// 	showMessage(0, "Failed", "Connection failed: " . $conn->connect_error, "");
+// }
 	
 $conn->query('set character_set_client=utf8');
 $conn->query('set character_set_connection=utf8');
