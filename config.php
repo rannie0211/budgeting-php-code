@@ -11,7 +11,7 @@
     mysqli_ssl_set($conn,NULL,NULL, "C:\ssl\DigiCertGlobalRootCA.crt.pem", NULL, NULL);
 
     // Establish the connection
-    mysqli_real_connect($conn, 'budgeting.mysql.database.azure.com', 'rannie', '990211Rouyi', 'budgeting-db', 3306, NULL, MYSQLI_CLIENT_SSL);
+    mysqli_real_connect($conn, $servername, dbusername, dbpassword, dbname, 3306, NULL, MYSQLI_CLIENT_SSL);
 
     //If connection failed, show the error
     if (mysqli_connect_errno())
