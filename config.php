@@ -16,7 +16,7 @@
     //If connection failed, show the error
     if (mysqli_connect_errno())
     {
-        die('Failed to connect to MySQL: '. mysqli_connect_error());
+        die('Failed to connect to MySQL: '. $conn->connect_error);
     }
     else 
     {
