@@ -46,7 +46,7 @@ $conn->query('set character_set_connection=utf8');
 $conn->query('set character_set_results=utf8');
 $conn->query('set character_set_server=utf8');
 
-$sql = "INSERT INTO user (user_username, user_email, user_password) VALUES ('". $username ."', '". $email ."', '". $password ."')";
+$sql = "INSERT INTO user (user_username, user_email, user_password,user_login_token) VALUES ('". $username ."', '". $email ."', '". $password ."', '" . $loginToken . "')";
 
 $result = $conn->query($sql);
 
