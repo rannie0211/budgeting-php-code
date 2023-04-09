@@ -7,6 +7,8 @@ $email = "";
 $password = "";
 $loginToken = generateRandomString();
 
+echo $username.$email.$password;
+
 
 if (!empty($_GET))
 {
