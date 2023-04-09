@@ -20,6 +20,8 @@ if (!empty($_POST))
 	$username = $_POST["username"];
     $email = $_POST["email"];
 	$password = $_POST["password"];
+
+    echo $username.$email.$password;
 }
 	
 if ($username === "" || $email === "" || $password === "")
