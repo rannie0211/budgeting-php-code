@@ -24,6 +24,6 @@ function receiptOcr($imageFile) {
 }
 
 print("=== Java Receipt OCR Demo - Need help? Email support@asprise.com ===\n");
-receiptOcr('receiptWatson.jpg'); // Modify this to use your own file if necessary
+receiptOcr('watsonReceipt.jpg'); // Modify this to use your own file if necessary
 
 ?>
