@@ -18,10 +18,6 @@
     {
         die('Failed to connect to MySQL: '. $conn->connect_error);
     }
-    else 
-    {
-        echo "Connect Successfully";
-    }
 
     function showMessage($status, $title, $message, $url)
     {
