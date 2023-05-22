@@ -27,33 +27,6 @@ if ($username === "" || $email === "" || $password === "")
 	showMessage(0, "Failed", "Invalid request.", "");
     return;
 }
-
-// Create connection
-$conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
-
-// Check connection
-if ($conn->connect_error)
-{
-	showMessage(0, "Failed", "Connection failed: " . $conn->connect_error, "");
-    return;
-}
-
-//Initializes MySQLi
-// $conn = mysqli_init();
-
-// mysqli_ssl_set($conn,NULL,NULL, "C:\ssl\DigiCertGlobalRootCA.crt.pem", NULL, NULL);
-
-// // Establish the connection
-// mysqli_real_connect($conn, "budgeting.mysql.database.azure.com", "rannie", "990211Rouyi", "budgeting-db", 3306, NULL, MYSQLI_CLIENT_SSL);
-
-// //If connection failed, show the error
-// if ($conn->connect_error)
-// {
-//     die('Failed to connect to MySQL: '. mysqli_connect_error());
-// }
-// else{
-//     echo "Sucess";
-// }
 	
 $conn->query('set character_set_client=utf8');
 $conn->query('set character_set_connection=utf8');
