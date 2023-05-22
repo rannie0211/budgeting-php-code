@@ -22,16 +22,6 @@ if ($user === "" || $password === "")
 	showMessage(0, "Failed", "Invalid request.", "");
     return;
 }
-
-// Create connection
-$conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
-
-// Check connection
-if ($conn->connect_error)
-{
-	showMessage(0, "Failed", "Connection failed: " . $conn->connect_error, "");
-    return;
-}
 	
 $conn->query('set character_set_client=utf8');
 $conn->query('set character_set_connection=utf8');
