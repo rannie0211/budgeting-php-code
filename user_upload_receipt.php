@@ -37,7 +37,7 @@ if(isset($receipt)){
 }
 
 if($uploadSuccess == 1) {
-
+    echo "Success!";
 }
 
 ?>
