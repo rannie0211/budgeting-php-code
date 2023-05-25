@@ -22,22 +22,30 @@ $conn->query('set character_set_connection=utf8');
 $conn->query('set character_set_results=utf8');
 $conn->query('set character_set_server=utf8');
 
-$uploadSuccess = 0;
-$imageStore = "";
-$target_dir = "";
+$tempFile = tempnam(sys_get_temp_dir(), 'image/');
+$imageStore = rand()."-".time().".jpeg";
+$tempFile = $tempFile . $imageStore;
+file_put_contents($tempFile, base64_decode($receipt));
 
-if(isset($receipt)){
+$imageData = addslashes(file_get_contents($tempFile));
 
-    $target_dir = "upload/";
-    $imageStore = rand()."-".time().".jpeg";
-    $target_dir = $target_dir . $imageStore;
-    file_put_contents($target_dir, base64_decode($receipt));
+$sql = "INSERT INTO image (image_blob) VALUES ('".$imageData."')";
 
-    $uploadSuccess = 1;
+$result = $conn->query($sql);
+
+if($result)
+{
+    showMessage(1,"Success", "The image is upload successful.", "");
+    return;
+}
+else
+{
+    showMessage(0, "Error", "Fail to upload image. Please try again.", "");
+    return;
 }
 
-if($uploadSuccess == 1) {
-    echo "Success!";
-}
+$conn->close();
+
+unlink($tempFile);
 
 ?>
