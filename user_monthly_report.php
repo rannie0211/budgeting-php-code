@@ -68,7 +68,7 @@ if($type === "Expense" || $type === "Income" )
                 $category = $row["trans_category"];
                 $totalAmount = $row["totalAmount"];
 
-                $sql2 = "SELECT * from transaction where trans_category = '".$category."' and trans_status = 0 and trans_type = '".$type."' and MONTH(trans_date) = '".$month."' and YEAR(trans_date) = '".$year."'";
+                $sql2 = "SELECT * from transaction where trans_user_id = '".$user_id."' and trans_category = '".$category."' and trans_status = 0 and trans_type = '".$type."' and MONTH(trans_date) = '".$month."' and YEAR(trans_date) = '".$year."'";
 
                 $result2 = $conn->query($sql2);
 
