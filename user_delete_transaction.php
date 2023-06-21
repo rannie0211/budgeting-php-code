@@ -5,6 +5,8 @@ $trans_id = "";
 
 include('config.php');
 
+date_default_timezone_set("Asia/Kuala_Lumpur");
+
 if (!empty($_GET))
 {	
     $user_id = $_GET["user_id"];
@@ -28,7 +30,9 @@ $conn->query('set character_set_connection=utf8');
 $conn->query('set character_set_results=utf8');
 $conn->query('set character_set_server=utf8');
 
-$sql = "UPDATE transaction SET trans_status = 1 where trans_id = '".$trans_id."' and trans_user_id = '".$user_id."'";
+$timestamp = date('Y-m-d');
+
+$sql = "UPDATE transaction SET trans_status = 1, trans_deleted_date = '".$timestamp."' where trans_id = '".$trans_id."' and trans_user_id = '".$user_id."'";
 
 $result = $conn->query($sql);
 

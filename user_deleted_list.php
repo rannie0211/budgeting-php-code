@@ -28,7 +28,7 @@ $conn->query('set character_set_server=utf8');
 $arrayResult = array();
 $arrayIndex = 0;
 
-$sql = "SELECT * from transaction where trans_user_id = '". $user_id ."' and trans_status = 1 and trans_date > now() - INTERVAL 15 day";
+$sql = "SELECT * from transaction where trans_user_id = '". $user_id ."' and trans_status = 1 and trans_deleted_date > now() - INTERVAL 15 day";
 
 $result = $conn->query($sql);
 
