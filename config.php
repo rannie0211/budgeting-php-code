@@ -19,12 +19,11 @@
         die('Failed to connect to MySQL: '. $conn->connect_error);
     }
 
-    function showMessage($status, $title, $message, $url)
+    function showMessage($status, $message, $url)
     {
         $final = 
         array(
             "status" => $status,
-            "title" => $title,
             "message" => $message,
             "url" => $url
         );

@@ -14,7 +14,7 @@ if(!empty($_POST))
 
 if($user_id === "" || $trans_id === "")
 {
-	showMessage(0, "Failed", "Invalid request.", "");
+	showMessage(0, "Invalid request.", "");
     return;
 }
 	
@@ -29,12 +29,12 @@ $result = $conn->query($sql);
 
 if($result)
 {
-    showMessage(1,"Success", "Transaction is restored successfully.", "");
+    showMessage(1, "Transaction is restored successfully.", "");
     return;
 }
 else
 {
-    showMessage(0, "Failed", "Failed to restore the deleted transaction. Technical error occur.","");
+    showMessage(0, "Failed to restore the deleted transaction. Technical error occur.","");
     return;
 }
 

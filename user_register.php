@@ -24,7 +24,7 @@ if (!empty($_POST))
 	
 if ($username === "" || $email === "" || $password === "")
 {
-	showMessage(0, "Failed", "Invalid request.", "");
+	showMessage(0, "Invalid request.", "");
     return;
 }
 
@@ -41,7 +41,7 @@ if(is_object($result))
 {
     if($result->num_rows > 0)
     {
-        showMessage(0, "Fail", "The email is registered, please use another email.", "");
+        showMessage(0, "The email is registered, please use another email.", "");
     }
     else
     {
@@ -50,12 +50,12 @@ if(is_object($result))
         
         if($result2)
         {
-            showMessage(1, "Success", "The account is registered successfully!", "");
+            showMessage(1, "The account is registered successfully!", "");
             return;
         }
         else
         {
-            showMessage(0, "Error", "Fail to register. Please try again","");
+            showMessage(0, "Fail to register. Please try again","");
             return;
         }
     }

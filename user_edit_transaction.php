@@ -40,7 +40,7 @@ if (!empty($_POST))
 
 if($trans_id === "" || $user_id === "" || $name ==="" || $category === "" || $amount === "" || $type === "" || $payment === "" || $income_tax === "")
 {
-    showMessage(0,"Failed", "Invalid request.", "");
+    showMessage(0,"Invalid request.", "");
     return;
 }
 	
@@ -64,12 +64,12 @@ $result = $conn->query($sql);
 
 if($result)
 {
-    showMessage(1,"Success", "Transaction is edited successfully.", "");
+    showMessage(1, "Transaction is edited successfully.", "");
     return;
 }
 else
 {
-    showMessage(0, "Failed", "Failed to edit the transaction. Technical error occur.","");
+    showMessage(0, "Failed to edit the transaction. Technical error occur.","");
     return;
 }
 

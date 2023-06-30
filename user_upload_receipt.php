@@ -13,7 +13,7 @@ if(!empty($_POST))
 
 if($user_id === "" || $receipt === "")
 {
-    showMessage(0, "Failed", "Invalid request.", "");
+    showMessage(0, "Invalid request.", "");
     return;
 }
 	
@@ -35,12 +35,12 @@ $result = $conn->query($sql);
 
 if($result)
 {
-    showMessage(1,"Success", "The image is upload successful.", "");
+    showMessage(1,"The image is upload successful.", "");
     return;
 }
 else
 {
-    showMessage(0, "Error", "Fail to upload image. Please try again.", "");
+    showMessage(0, "Fail to upload image. Please try again.", "");
     return;
 }
 

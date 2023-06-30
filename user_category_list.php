@@ -11,7 +11,7 @@ if(!empty($_POST))
 
 if($user_id === "")
 {
-    showMessage(0, "Failed", "Invalid request.", "");
+    showMessage(0, "Invalid request.", "");
     return;
 }
 	
@@ -48,7 +48,7 @@ if(is_object($result) && is_object($result2))
         }
     }
     else{
-        showMessage(0, "Empty", "No expense inside the database. Please contact technician.", "");
+        showMessage(0, "No expense inside the database. Please contact technician.", "");
         return;
     }
 
@@ -61,14 +61,14 @@ if(is_object($result) && is_object($result2))
         }
     }
     else{
-        showMessage(0, "Empty", "No income inside the database. Please contact technician.", "");
+        showMessage(0, "No income inside the database. Please contact technician.", "");
         return;
     }
 
 }
 else
 {
-    showMessage(0, "Failed", "Failed to obtain category", "");
+    showMessage(0, "Failed to obtain category", "");
     return;
 }
 

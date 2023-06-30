@@ -19,7 +19,7 @@ if(!empty($_POST))
 
 if ($user === "" || $password === "")
 {
-	showMessage(0, "Failed", "Invalid request.", "");
+	showMessage(0, "Invalid request.", "");
     return;
 }
 	
@@ -47,25 +47,25 @@ if(is_object($result))
 
             if($result2) 
             {
-                showMessage(1, "Success", "You are login successfully!", '{"user_id":"'.$id.'", "currency":"'.$currency.'"}');
+                showMessage(1, "You are login successfully!", '{"user_id":"'.$id.'", "currency":"'.$currency.'"}');
                 return;
             }
             else
             {
-                showMessage(0, "Login Failed", "Technical Problem.", "");
+                showMessage(0, "Technical Problem.", "");
                 return;
             }
         }
     }
     else
     {
-        showMessage(0, "Login Failed", "Invalid username and password. ", "");
+        showMessage(0, "Invalid username and password. ", "");
         return;
     }
 }
 else
 {
-    showMessage(0, "Failed", "No user record.", "");
+    showMessage(0, "No user record.", "");
     return;
 }
 

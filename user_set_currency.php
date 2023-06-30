@@ -19,7 +19,7 @@ if(!empty($_POST))
 
 if($user_id === "" || $currency === "")
 {
-    showMessage(0,"Failed", "Invalid request.", "");
+    showMessage(0, "Invalid request.", "");
 }
 
 $conn->query('set character_set_client=utf8');
@@ -33,12 +33,12 @@ $result = $conn->query($sql);
 
 if($result)
 {
-    showMessage(1,"Success", "The currency is set successfully.", "");
+    showMessage(1,"The currency is set successfully.", "");
     return;
 }
 else
 {
-    showMessage(0, "Error", "Technical error.", "");
+    showMessage(0, "Technical error.", "");
 }
 
 $conn->close();

@@ -19,7 +19,7 @@ if (!empty($_POST))
 
 if($date === "" || $user_id === "")
 {
-    showMessage(0,"Failed", "Invalid request.", "");
+    showMessage(0, "Invalid request.", "");
     return;
 }
 
@@ -61,13 +61,13 @@ if(is_object($result))
     }
     else
     {
-        showMessage(0, "Empty", "No record. Create your first record of the day! ", "");
+        showMessage(0, "No record. Create your first record of the day! ", "");
         return;
     }
 }
 else
 {
-    showMessage(0, "Failed", "Failed to obtain data. ", "");
+    showMessage(0, "Failed to obtain data. ", "");
 	return;
 }
 

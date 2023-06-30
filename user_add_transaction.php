@@ -32,7 +32,7 @@ if(!empty($_POST))
 
 if ($user_id === "" || $category === "" || $name ==="" || $date ==="" || $amount === "" || $type === "" || $payment === "" || $income_tax === "")
 {
-	showMessage(0, "Failed", "Invalid request.", "");
+	showMessage(0, "Invalid request.", "");
     return;
 }
 	
@@ -54,12 +54,12 @@ if($receipt === "")
 
     if($result)
     {
-        showMessage(1,"Success", "The transaction is added successful.", "");
+        showMessage(1, "The transaction is added successful.", "");
         return;
     }
     else
     {
-        showMessage(0, "Error", "Fail to add transaction. Please try again.", "");
+        showMessage(0, "Fail to add transaction. Please try again.", "");
         return;
     }
 }
@@ -78,12 +78,12 @@ else
 
     if($result)
     {
-        showMessage(1,"Success", "The transaction is added successful.", "");
+        showMessage(1, "The transaction is added successful.", "");
         return;
     }
     else
     {
-        showMessage(0, "Error", "Fail to add transaction. Please try again.", "");
+        showMessage(0, "Fail to add transaction. Please try again.", "");
         return;
     }
 

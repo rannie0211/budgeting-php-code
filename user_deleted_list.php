@@ -16,7 +16,7 @@ if(!empty($_POST))
 
 if($user_id === "")
 {
-    showMessage(0,"Failed", "Invalid request.", "");
+    showMessage(0,"Invalid request.", "");
     return;
 }
 	
@@ -52,13 +52,13 @@ if(is_object($result))
     }
     else
     {
-        showMessage(0, "Empty", "No record! ", "");
+        showMessage(0, "No record! ", "");
         return;
     }
 }
 else
 {
-    showMessage(0, "Failed", "Failed to obtain data. ", "");
+    showMessage(0, "Failed to obtain data. ", "");
 	return;
 }
 

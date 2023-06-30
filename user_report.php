@@ -22,7 +22,7 @@ if (!empty($_POST))
 
 if($user_id === "" || $month === "" || $type === "")
 {
-    showMessage(0,"Failed", "Invalid request.", "");
+    showMessage(0,"Invalid request.", "");
     return;
 }
 	
@@ -95,13 +95,13 @@ if($type === "Expense" || $type === "Income" )
         }
         else
         {
-            showMessage(0, "Empty", "Empty result.", "");
+            showMessage(0, "Empty result.", "");
             return;
         }
     }
     else
     {
-        showMessage(0, "Failed", "Failed to obtain data. Please inform admin.", "");
+        showMessage(0, "Failed to obtain data. Please inform admin.", "");
         return;
     }
 }
@@ -125,7 +125,7 @@ else
     }
     else
     {
-        showMessage(0, "Failed", "Failed to obtain data. Please inform admin.", "");
+        showMessage(0, "Failed to obtain data. Please inform admin.", "");
         return;
     }
 
@@ -147,7 +147,7 @@ else
     }
     else
     {
-        showMessage(0, "Failed", "Failed to obtain data. Please inform admin.", "");
+        showMessage(0, "Failed to obtain data. Please inform admin.", "");
         return;
     }
 

@@ -21,7 +21,7 @@ if (!empty($_POST))
 
 if($user_id === "" || $trans_id === "")
 {
-    showMessage(0,"Failed", "Invalid request.", "");
+    showMessage(0, "Invalid request.", "");
     return;
 }
 	
@@ -39,12 +39,12 @@ $result = $conn->query($sql);
 
 if($result)
 {
-    showMessage(1,"Success", "Transaction is deleted successfully.", "");
+    showMessage(1, "Transaction is deleted successfully.", "");
     return;
 }
 else
 {
-    showMessage(0, "Failed", "Failed to delete the transaction. Technical error occur.","");
+    showMessage(0, "Failed to delete the transaction. Technical error occur.","");
     return;
 }
 
