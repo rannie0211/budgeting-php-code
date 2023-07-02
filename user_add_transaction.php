@@ -51,7 +51,6 @@ if($receipt === "")
 
     $result = $conn->query($sql);
 
-
     if($result)
     {
         showMessage(1, "The transaction is added successful.", "");
@@ -78,7 +77,7 @@ else
 
     if($result)
     {
-        showMessage(1, "The transaction is added successful.", "");
+        showMessage(1,"The transaction is added successful.", "");
         return;
     }
     else
@@ -87,7 +86,6 @@ else
         return;
     }
 
-    echo $conn->error;
 }
 
 $conn->close();
